@@ -1,0 +1,19 @@
+Tasks20241008
+-----------------------------
+[Task]
+09.37. Design today's workflow
+      [Subtask]
+      09.39. Identify key spots for tomorow's meeting with Sage
+         09.45. Provider creation: I adapted the customer class ignoring the use of the many parts of the code.
+         09.47. Review works creation
+         09.48. Require the alternative line creation method
+         09.48. Require a demonstration of the "CreateSalesAlbaran" method.
+         09.49. Require a demostration of the "ReceivedInvoice" method execution
+[Stop]
+09.52. Leg stretch
+[Stop]
+10.57. Leg stretch
+[Stop]
+10.59. Leg stretch
+[Stop]
+10.59. Leg stretch

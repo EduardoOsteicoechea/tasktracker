@@ -1,0 +1,21 @@
+{
+   "compilerOptions":{
+      "esModuleInterop": true,
+      "rootDir": "./src",
+      "outDir": "./dist",
+      "target": "ES2020",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "forceConsistentCasingInFileNames": true, 
+      "strict": true,
+      "skipLibCheck": true,
+      "paths":{
+         "FileNameSystem":["./src/FileNameSystem.ts"],
+         "SeparatorsSystem":["./src/SeparatorsSystem.ts"],
+         "TaskSystem":["./src/TaskSystem.ts"],
+         "TabSystem":["./src/TabSystem.ts"],
+         "FormattingSystem":["./src/FormattingSystem.ts"]
+      }
+   }
+}
