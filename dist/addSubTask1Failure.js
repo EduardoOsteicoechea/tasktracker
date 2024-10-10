@@ -4,8 +4,7 @@ const asstMngr = new AssetManager();
 const tab = asstMngr.tabSys.tab2;
 let newLine = "";
 setTimeout(() => {
-    newLine += "\n";
-    newLine += tab + asstMngr.tskSys.subTask;
+    newLine += tab + asstMngr.tskSys.failure;
     newLine += "\n";
     newLine += tab + asstMngr.timSys.currentTime;
     newLine += process.env.CONTENT;
@@ -20,4 +19,4 @@ setTimeout(() => {
         }
     });
 }, 500);
-//# sourceMappingURL=addSubTask1.js.map
+//# sourceMappingURL=addSubTask1Failure.js.map

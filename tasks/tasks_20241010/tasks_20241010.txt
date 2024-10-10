@@ -1,0 +1,73 @@
+Tasks20241010
+-----------------------------
+[Task]
+04.55.[0.02] Design today's workflow
+
+   [Subtask]
+   04.57.[0.05] Check for mew requirements by Berrilan in received emails
+      [Success]
+      05.10.[0.27] Checked new requirements and also replied to Walter's support email
+
+   [Subtask]
+   05.12.[0.3] Design suppliers unrepeated inverse data transfer workflow
+      [Ongoing]
+      05.17.[0.38] Setting current subtask as task
+
+-----------------------------
+[Task]
+05.17.[0.38] Design suppliers unrepeated inverse data transfer workflow
+
+   [Subtask]
+   05.28.[0.57] Delete suppliers previously transfered from Gestproject to Sage
+      [Success]
+      05.31.[0.62] Done
+
+   [Subtask]
+   05.36.[0.7] Use current synchronize suppliers (that only executes simple data transfer) to transfer the current gestproject suppliers to Sage, in order to delete them from Gestproject, to start designing in thought and code, the inverse synchronization process. Remember to duplicate the current supplier processes folder to avoid valuable data loss
+      [Success]
+      05.42.[0.8] Done. Remember that the current supplier workflow seem to be trying to duplicate entites (I don't know yet if it's due to tweaks in yesterday's meeting with Sage technichal support)
+
+   [Subtask]
+   05.43.[0.82] Delete all suppliers from Gestproject
+[Stop]
+06.02.[1.13] Prepare Elías for school, and didn't finished because after deleting the PAR_TPA '12' value registries, and trying to delete the corresponding participants in both the UI and database, found out that both interfaces are referenced to other tables, and therefore prevent deletion until the referenced items are also deleted
+
+   [Subtask]
+   07.32.[0] Write to José Luis to request support to clean up my current Gestproject data to test the reverse data transfer process
+      [Success]
+      07.48.[0.27] Done but José Luis is not responding quikly, therefore I'll refactor the part of the code that's throwing an error after deleting the '12' values registries in the PAR_TPA table. While waiting, I made some research on classes design.
+
+   [Subtask]
+   07.50.[0.3] Find the issue spot where the application breaks when trying to load the participants
+      07.57.[0.4] The issue is at GestprojectProvidersManager
+      07.59.[0.45] José Luis responded, therefore I'll talk with him about the previous task alongside the current task
+      [Success]
+      08.13.[0.68] The issue was the absense of a check before processing the 'gestprojectProviderParticipantList'. I added a check that prevents the processing of this list (the processing done of convert it's participants models to Providers models) when the 'gestprojectProviderParticipantList' is empty
+[Ongoing]
+08.18.[0.77] I decided to break up this task to ease it's manageability
+
+-----------------------------
+[Task]
+08.20.[0.8] Duplicate the provider syncronization directory to avoid valuable data loss
+
+   [Subtask]
+   08.35.[1.05] Duplicate folder, move it to the '__prev' folder, rename every file namespace, and coment a code block in two files, to allow for compilation
+      08.37.[1.08] Failed to build and to detect errors in visual studio
+      08.41.[1.15] I deleted the folder and tried to run the application whit a single providers synchronization folter but the compiler said that the process is already running
+      08.43.[1.18] Because no SincronizadorGPS50.exe was found in the task manager, I closed and opened visual studio to check if the error goes away
+      08.45.[1.22] It worked now. It was a bug in Visual Studio.
+      08.45.[1.22] I'll push to github before continuing to avoid valuable data loss
+      08.48.[1.27] Done. I verified at Github's website
+   [Failure]
+   08.52.[1.33] Instead of duplicating the providers synchronization directory, I'll duplicate the files and try to move them to the _prev directory of the provider synchronization directory
+      08.55.[1.38] I'll proceed to declare this task as failed also, to begin the providers inverse synchroniztion process without the folder duplication action, but using file duplication (the previous files will be move to the inmediate _prev directory after validating that the new ones run smoothly) approach
+[Failure]
+08.59.[1.45] I'll try a different approach. the reason were explained in the item above.
+
+-----------------------------
+[Task]
+09.02.[1.5] Evaluate if the 'ProvidersDataTableManager' class is refactorable to allow the inverse provider synchronization workflow
+[Stop]
+09.03.[1.52] My head hurts beacuse of the eyeglasses and it's time for a leg stretch
+[Success]
+09.41.[0] Because I can load the Sage entities and convert them into Gestproject entities, and add the alongside the Gestproject providers list, I can efectively incorporate the reverse synchronization process

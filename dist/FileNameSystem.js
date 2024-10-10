@@ -1,9 +1,12 @@
 import moment from 'moment';
 export default class FileNameSystem {
     constructor() {
-        this.fileName1 = `tasks_${moment().format('YYYYMMDD')}.txt`;
-        this.elapsedTime = `tasks_elapsedTime${moment().format('YYYYMMDD')}.txt`;
-        this.lastFormatedTime = `tasks_lastFormatedTime${moment().format('YYYYMMDD')}.txt`;
+        this.currentDate = moment().format('YYYYMMDD');
+        this.tasksDirectoryName = "tasks";
+        this.todaysDirectoryName = this.tasksDirectoryName + "/" + "tasks_" + this.currentDate;
+        this.fileName1 = this.todaysDirectoryName + "/" + "tasks_" + this.currentDate + ".txt";
+        this.elapsedTime = this.todaysDirectoryName + "/" + "tasks_elapsedTime" + this.currentDate + ".txt";
+        this.lastFormatedTime = this.todaysDirectoryName + "/" + "tasks_lastFormatedTime" + this.currentDate + ".txt";
     }
 }
 //# sourceMappingURL=FileNameSystem.js.map

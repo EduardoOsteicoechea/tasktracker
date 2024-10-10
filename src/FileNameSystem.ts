@@ -2,7 +2,10 @@ import moment from 'moment';
 
 export default class FileNameSystem
 {
-   fileName1:string = `tasks_${moment().format('YYYYMMDD')}.txt`;
-   elapsedTime:string = `tasks_elapsedTime${moment().format('YYYYMMDD')}.txt`;
-   lastFormatedTime:string = `tasks_lastFormatedTime${moment().format('YYYYMMDD')}.txt`;
+   currentDate:string = moment().format('YYYYMMDD');
+   tasksDirectoryName:string = "tasks";
+   todaysDirectoryName:string = this.tasksDirectoryName + "/" + "tasks_" + this.currentDate;
+   fileName1:string = this.todaysDirectoryName + "/" + "tasks_" + this.currentDate + ".txt";
+   elapsedTime:string = this.todaysDirectoryName + "/" + "tasks_elapsedTime" + this.currentDate + ".txt";
+   lastFormatedTime:string = this.todaysDirectoryName + "/" + "tasks_lastFormatedTime" + this.currentDate + ".txt";
 }

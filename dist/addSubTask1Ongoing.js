@@ -1,11 +1,10 @@
 import * as fs from 'fs';
 import AssetManager from './AssetManager.js';
 const asstMngr = new AssetManager();
-const tab = asstMngr.tabSys.tab2;
+const tab = asstMngr.tabSys.tab3;
 let newLine = "";
 setTimeout(() => {
-    newLine += "\n";
-    newLine += tab + asstMngr.tskSys.subTask;
+    newLine += tab + asstMngr.tskSys.ongoing;
     newLine += "\n";
     newLine += tab + asstMngr.timSys.currentTime;
     newLine += process.env.CONTENT;
@@ -20,4 +19,4 @@ setTimeout(() => {
         }
     });
 }, 500);
-//# sourceMappingURL=addSubTask1.js.map
+//# sourceMappingURL=addSubTask1Ongoing.js.map
