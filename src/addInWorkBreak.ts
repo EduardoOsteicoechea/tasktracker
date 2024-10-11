@@ -4,7 +4,7 @@ const asstMngr = new AssetManager();
 
 
 let newLine = '';
-newLine += asstMngr.tskSys.stop;
+newLine += asstMngr.tskSys.inWorkBreak;
 newLine += "\n";
 setTimeout(() => {
    newLine += asstMngr.timSys.currentTime;
@@ -15,7 +15,7 @@ setTimeout(() => {
       if (err) {
          asstMngr.finSys.error(err, asstMngr.tabSys, asstMngr.timSys);
       } else {
-         asstMngr.finSys.success(newLine, asstMngr.tabSys, asstMngr.timSys, false, true);
+         asstMngr.finSys.success(newLine, asstMngr.tabSys, asstMngr.timSys, true, false);
       }
    });
 }, 500);

@@ -2,12 +2,12 @@ import * as fs from 'fs';
 import AssetManager from './AssetManager.js';
 const asstMngr = new AssetManager();
 
-
-let newLine = '';
-newLine += asstMngr.tskSys.stop;
-newLine += "\n";
+const tab = asstMngr.tabSys.tab4;
+let newLine = "";
 setTimeout(() => {
-   newLine += asstMngr.timSys.currentTime;
+   newLine += tab + asstMngr.tskSys.success;
+   newLine += "\n";
+   newLine += tab + asstMngr.timSys.currentTime;
    newLine += process.env.CONTENT;
    newLine += "\n";
    const fileName = asstMngr.fnmSys.fileName1;
@@ -15,7 +15,7 @@ setTimeout(() => {
       if (err) {
          asstMngr.finSys.error(err, asstMngr.tabSys, asstMngr.timSys);
       } else {
-         asstMngr.finSys.success(newLine, asstMngr.tabSys, asstMngr.timSys, false, true);
+         asstMngr.finSys.success(newLine, asstMngr.tabSys, asstMngr.timSys);
       }
    });
 }, 500);

@@ -10,4 +10,6 @@ export default class TaskSystem
    error:string = "[Error]";
    analysis:string = "[Analysis]";
    stop:string = "[Stop]";
+   inWorkBreak:string = "[InWorkBreak]";
+   postponed:string = "[Postponed]";
 }

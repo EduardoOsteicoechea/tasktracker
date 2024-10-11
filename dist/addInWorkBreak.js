@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import AssetManager from './AssetManager.js';
 const asstMngr = new AssetManager();
 let newLine = '';
-newLine += asstMngr.tskSys.stop;
+newLine += asstMngr.tskSys.inWorkBreak;
 newLine += "\n";
 setTimeout(() => {
     newLine += asstMngr.timSys.currentTime;
@@ -14,8 +14,8 @@ setTimeout(() => {
             asstMngr.finSys.error(err, asstMngr.tabSys, asstMngr.timSys);
         }
         else {
-            asstMngr.finSys.success(newLine, asstMngr.tabSys, asstMngr.timSys, false, true);
+            asstMngr.finSys.success(newLine, asstMngr.tabSys, asstMngr.timSys, true, false);
         }
     });
 }, 500);
-//# sourceMappingURL=addStop.js.map
+//# sourceMappingURL=addInWorkBreak.js.map

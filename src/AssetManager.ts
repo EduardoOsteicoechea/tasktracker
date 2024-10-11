@@ -16,7 +16,12 @@ export default class AssetManager
    timSys = new TimeTracker();
    finSys = new FinalizationsSystem();
 
-   constructor(){
+   constructor(clientName:string = ""){
+
+      // if(clientName !== ""){
+      //    clientName = clientName + "_"
+      // }
+
       fs.mkdir(this.fnmSys.todaysDirectoryName, { recursive: true }, (err) => {
          if (err) {
             if (err.code !== 'EEXIST') {
@@ -24,10 +29,7 @@ export default class AssetManager
             } else {
                console.error("Error: " + err);
             }
-         } 
-         // else {
-         //    console.log("Today's tasks directory was created");
-         // }
+         }
       });
    }
 }

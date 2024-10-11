@@ -1,0 +1,88 @@
+AvantLeap_Tasks20241011
+-----------------------------
+[Task]
+03.38.[0.02] Review yesterday's endpoint and determine today's startpoint
+[InWorkBreak]
+03.38.[0.02] Testing InWorkBreak's algorithm
+[InWorkBreak]
+03.39.[0.03] Testing InWorkBreak's algorithm
+
+-----------------------------
+[Task]
+03.43.[0.1] Review yesterday's endpoint and determine today's startpoint
+      03.48.[0.18] The algorith is recording a single element or failing at recording
+      03.49.[0.2] This was the error message: Error At: SincronizadorGPS50.GestprojectProvidersProcessor.FilterSelectQueryResult: 
+You supplied an invalid type at: ID. It's value was: 1
+      04.06.[0.48] The error was at the new 'FilterSelectQueryResult' that had misconfigured filtering
+[Success]
+04.11.[0.57] Refactored abovementioned method and validated that entities are registering correctly. Now the startpoint is to refactor the 'ValidateEntitySynchronizationStatus' to validate the synchronization status correctly
+
+-----------------------------
+[Task]
+04.40.[1.05] Refactor the 'ValidateEntitySynchronizationStatus' to validate the synchronization status correctly
+[Success]
+04.41.[1.07] Refactored Method and achieved data printing in seemingly coherent state but pending for validation
+[InWorkBreak]
+04.42.[1.08] Leg stretch and eye rest
+
+-----------------------------
+[Task]
+05.10.[1.55] Test 'ValidateEntitySynchronizationStatus' method on Sage's endpoint single entity deletion. Pending multiple entitiy deletion test. Gestproject's endpoint single and multiple entity deleting will be tested after completing the data transfer (because this endpoint wont have data in this workflow).
+[Ongoing]
+06.03.[2.43] The method didn't printed the deleted entity because it just doesn't grabs it, and therefore isn't even noticed, nonetheless, the deleted entity remains in the synchronization table. Therefore, I created methods in the GenerateDataTable Class to intend to identify if the entity was deleted at some endpoint and delete that deleted entity from the synchronization table.
+[Stop]
+06.04.[2.45] Prepare and take Elías to school
+
+   [Subtask]
+   07.31.[0] Fix the error of the getDeletedEntities method that doesn't recognizes the deleted entities
+      [Success]
+      07.42.[0.18] Successfully identified the surplus entity and actually deleted it validating also the deleteEntity method
+[Success]
+07.43.[0.2] Explained in the abovementioned
+
+-----------------------------
+[Task]
+07.45.[0.23] Design synchronization process (begin considering validating if selected entities list already exist in Gestproject's entities database to avoid dublication)
+
+   [Subtask]
+   08.11.[0.67] Revise GetEntities id List method in the 'TopRowControlsGenerator' class, in order to obtain the Synchronization id's instead of the Gestproject's id's for inverse synchronization processes. I think that this might damage the issuedInvoicess process, so be careful when you hit that spot. I think also that the customer synchronization process is safe because it didn't used the project framework
+      [Success]
+      08.12.[0.68] It seems to be working fine now
+
+   [Subtask]
+   08.13.[0.7] Refactor the Get Gestproject entities method to ensure the obtaining of the synchronization table entities that posesses the id's selected in the UI
+      08.18.[0.78] Writing this subtask remainded me that I shoul verify if the GenerateDataTable method is filtering the Sage Entities that already exist in Gestproject. I think that it doesnt'.
+   [Postponed]
+   08.26.[0.92] I should refactor this before I forget. The GetAndStoreGestprojectEntities Should exclude the sage entities that are already registered in Gestproject
+
+   [Subtask]
+   08.29.[0.97] Refactor the GetAndStoreGestprojectEntities to exclude the Sage Entities that were already synchronized in Gestproject. Remember also to revise the 'ValidateSynchronizationStatus' method. It may also require refactoring.
+   [Postponed]
+   08.45.[1.23] Because a lack of entities in Gestproject I cant test this but I already refactored this. Therefore, I'll pospone the closing of this task and move on to the synchronization process
+
+   [Subtask]
+   08.47.[1.27] On the synchronization process side, get all the syncrhonization table elements that match the selected synchronization id's and display a list of them along with their properties to validate the code
+[InWorkBreak]
+08.47.[1.27] Leg stretch and eye rest
+      09.17.[1.77] Starting the method
+      09.54.[2.38] I took a good time to provide a robust response to Enrique's request for a new estimation of this project
+      10.22.[2.85] I took a good time to provide a robust response to Enrique's request for a new estimation of this project
+[InWorkBreak]
+10.24.[2.88] Leg stretch and eye rest
+      10.43.[3.2] Validating method work
+      11.29.[3.97] I took a good time to provide a robust response to Enrique's request for a new estimation of this project
+
+      [Success]
+      11.48.[4.28] Done. Pending to refactor 'StoreBreakDownGestprojectEntityListByStatus' method to validate on Gestproject's side instead of Sage's side
+
+   [Subtask]
+   11.48.[4.28] Refactor 'StoreBreakDownGestprojectEntityListByStatus' method to validate on Gestproject's side instead of Sage's side
+[Stop]
+11.49.[4.3] Went to look for Elías at school.
+
+   [Subtask]
+   12.44.[0] Entered Team Company Call
+      [Success]
+      13.40.[0.93] Ended team company call
+[Stop]
+13.40.[0.93] Ended day

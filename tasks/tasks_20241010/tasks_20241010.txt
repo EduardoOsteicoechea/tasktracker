@@ -71,3 +71,58 @@ Tasks20241010
 09.03.[1.52] My head hurts beacuse of the eyeglasses and it's time for a leg stretch
 [Success]
 09.41.[0] Because I can load the Sage entities and convert them into Gestproject entities, and add the alongside the Gestproject providers list, I can efectively incorporate the reverse synchronization process
+
+-----------------------------
+[Task]
+09.46.[0.08] Refactor 'ProvidersDataTableManager.GetAndStoreGestprojectEntities()' to incorporate the Sage Entities to the 'GestprojectEntities' list
+      10.04.[0.38] All of this time I tried to delete Gestproject table elements to release the constraints of the suppliers in order to delete them but found it impossible, everithing seems to be interconnected. I deleted all the records in nearly 20 tables and still won't be allowed to delete the providers
+
+   [Subtask]
+   10.06.[0.42] Validate that the 'new GestprojectProvidersManager().GetAll(gestprojectConnectionManager.GestprojectSqlConnection);' statement retrieves an empty list.
+      [Success]
+      10.09.[0.47] Validated
+
+   [Subtask]
+   10.10.[0.48] Generate a method that returns a list of Sage50ProviderModel
+      [Success]
+      10.21.[0.67] Done and validated
+
+   [Subtask]
+   10.22.[0.68] Generate a method that generates and returns a list of GestprojectProviderModel from a Sage50ProviderModel list
+      [Success]
+      10.34.[0.88] Done, validated and also validated the adding of the two lists to obtain the final Gestproject entity list
+
+   [Subtask]
+   10.40.[0.98] REfactor the proccess gestproject entitiy method to inforce that the sage guid and code get's printed along with the rest of the entity data translated to the new Gestproject entity
+[Stop]
+10.40.[0.98] My head hurts beacuse of the eyeglasses and it's time for a leg stretch
+      11.01.[0] Validate if the data is duplicated on table recreation
+      11.45.[0.73] Identified that actually, only the first record is being registered, and went through to refactor the append synchronization data to entity method, but it's correctness hasn't been validated
+      [Subtask]
+      11.47.[0.77] Evaluate the 'DetermineEntityWorkflow' method to determine unregistering entities issue spots
+         11.50.[0.82] Evaluate the 'DetermineEntityWorkflow.WasEntityRegistered' method which is the first filtering step
+[Stop]
+11.50.[0.82] Went to look for Elías
+         13.10.[0] Evaluate the 'DetermineEntityWorkflow.WasEntityRegistered' method which is the first filtering step
+[Stop]
+13.23.[0.22] Issue at environment
+         13.38.[0] Evaluate the 'DetermineEntityWorkflow.WasEntityRegistered' method which is the first filtering step
+         [Success]
+         14.23.[0.75] Corrected Method
+
+   [Subtask]
+   14.23.[0.75] Refactor Register entity method
+      [Success]
+      14.40.[1.03] Refactored Successfully
+[Stop]
+14.40.[1.03] Lunch Time
+
+   [Subtask]
+   17.10.[0] Analyze and respond to Enrique's question carefully
+      [Success]
+      17.49.[0.65] Responded to Enrique's messages until he told me that he'll leave the task for tomorrow due to other pending tasks
+
+   [Subtask]
+   18.20.[1.17] Refactor 'UpdateEntity' method that's producing duplication
+[Stop]
+18.32.[1.37] Ended work day. Last task is pending

@@ -10,6 +10,8 @@ export default class TaskSystem {
         this.error = "[Error]";
         this.analysis = "[Analysis]";
         this.stop = "[Stop]";
+        this.inWorkBreak = "[InWorkBreak]";
+        this.postponed = "[Postponed]";
     }
 }
 //# sourceMappingURL=TaskSystem.js.map

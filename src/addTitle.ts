@@ -1,12 +1,11 @@
 import * as fs from 'fs';
 import moment from 'moment';
-import open from 'open';
 import AssetManager from './AssetManager.js';
-const asstMngr = new AssetManager();
+const asstMngr = new AssetManager(process.env.CONTENT);
 
 let newLine = "";
 
-newLine += `Tasks${moment().format('YYYYMMDD')}`;
+newLine += `${process.env.CONTENT}_Tasks${moment().format('YYYYMMDD')}`;
 
 
 

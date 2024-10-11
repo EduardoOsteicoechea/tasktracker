@@ -56,7 +56,7 @@ export default class TimeTracker {
                   console.error('Error reading file:', err);
                } else {
                   currentTimeString = data ?? 0;
-                  let timeDifference = this.calculateTimeDifference(lastFormattedTimeString)
+                  let timeDifference = this.calculateTimeDifference(lastFormattedTimeString);
 
                   fs.writeFile(currentTimeFileName, (timeDifference + ""), (err) => {
                      if (err) {
@@ -71,6 +71,37 @@ export default class TimeTracker {
          }
       });
       return this.elapsedTime;
+   }
+   
+   trackBreakTime(){
+      const lastFormatedTimeFileName = this.fnmSys.lastFormatedTime;
+      const currentTimeFileName = this.fnmSys.elapsedTime;
+
+      let lastFormattedTimeString: string = "";
+      let currentTimeString: string = "";
+
+      fs.readFile(lastFormatedTimeFileName, 'utf8', (err, data) => {
+         if (err) {
+            // console.error('Error reading file:', err);
+         } else {
+            lastFormattedTimeString = data;
+
+            fs.readFile(currentTimeFileName, 'utf8', (err, data) => {
+               if (err) {
+                  console.error('Error reading file:', err);
+               } else {
+                  currentTimeString = data ?? 0;
+                  let timeDifference = this.calculateTimeDifference(lastFormattedTimeString)
+
+                  fs.appendFile(this.fnmSys.InWorkBreaks, ("," + timeDifference), (err) => {
+                     if (err) {
+                        console.error(`${this.tabSys.tab1}Error: ${err}`);
+                     }
+                  });
+               }
+            });
+         }
+      });
    }
 
    getElapsedTime():string {
@@ -107,6 +138,9 @@ export default class TimeTracker {
    }
 
    reset() {
+      // this.generateTasksTimeReport();
+      // this.generateInWorkBreaksReport();
+      
       fs.unlink(this.fnmSys.lastFormatedTime, (err) => {
          if (err) {
             console.error('Error deleting file: ', err);

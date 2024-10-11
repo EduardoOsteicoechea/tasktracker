@@ -64,6 +64,34 @@ export default class TimeTracker {
         });
         return this.elapsedTime;
     }
+    trackBreakTime() {
+        const lastFormatedTimeFileName = this.fnmSys.lastFormatedTime;
+        const currentTimeFileName = this.fnmSys.elapsedTime;
+        let lastFormattedTimeString = "";
+        let currentTimeString = "";
+        fs.readFile(lastFormatedTimeFileName, 'utf8', (err, data) => {
+            if (err) {
+                // console.error('Error reading file:', err);
+            }
+            else {
+                lastFormattedTimeString = data;
+                fs.readFile(currentTimeFileName, 'utf8', (err, data) => {
+                    if (err) {
+                        console.error('Error reading file:', err);
+                    }
+                    else {
+                        currentTimeString = data ?? 0;
+                        let timeDifference = this.calculateTimeDifference(lastFormattedTimeString);
+                        fs.appendFile(this.fnmSys.InWorkBreaks, ("," + timeDifference), (err) => {
+                            if (err) {
+                                console.error(`${this.tabSys.tab1}Error: ${err}`);
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    }
     getElapsedTime() {
         this.track();
         setTimeout(() => {
@@ -93,6 +121,8 @@ export default class TimeTracker {
         return parseFloat(timeDifference.toFixed(2));
     }
     reset() {
+        // this.generateTasksTimeReport();
+        // this.generateInWorkBreaksReport();
         fs.unlink(this.fnmSys.lastFormatedTime, (err) => {
             if (err) {
                 console.error('Error deleting file: ', err);

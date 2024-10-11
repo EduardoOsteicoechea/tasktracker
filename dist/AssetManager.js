@@ -6,7 +6,10 @@ import TimeTracker from "./TimeTracker.js";
 import FinalizationsSystem from "./FinalizationsSystem.js";
 import fs from 'fs';
 export default class AssetManager {
-    constructor() {
+    constructor(clientName = "") {
+        // if(clientName !== ""){
+        //    clientName = clientName + "_"
+        // }
         this.fnmSys = new FileNameSystem();
         this.sepSys = new SeparatorsSystem();
         this.tabSys = new TabSystem();
@@ -22,9 +25,6 @@ export default class AssetManager {
                     console.error("Error: " + err);
                 }
             }
-            // else {
-            //    console.log("Today's tasks directory was created");
-            // }
         });
     }
 }
