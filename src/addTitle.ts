@@ -5,7 +5,7 @@ const asstMngr = new AssetManager(process.env.CONTENT);
 
 let newLine = "";
 
-newLine += `${process.env.CONTENT}_Tasks${moment().format('YYYYMMDD')}`;
+newLine += `${process.env.TITLE}_tasks_${moment().format('YYYYMMDD')}`;
 
 
 

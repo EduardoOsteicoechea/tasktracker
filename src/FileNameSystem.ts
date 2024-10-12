@@ -6,13 +6,13 @@ export default class FileNameSystem
 
    tasksDirectoryName:string = "tasks";
 
-   todaysDirectoryName:string = this.tasksDirectoryName + "/" + process.env.CONTENT + "_" + "tasks_" + this.currentDate;
+   todaysDirectoryName:string = this.tasksDirectoryName + "/" + this.currentDate + "_" + process.env.TITLE + "_" +  "tasks";
    
-   fileName1:string = this.todaysDirectoryName + "/" + "tasks_" + this.currentDate + ".txt";
+   fileName1:string = this.todaysDirectoryName + "/" + this.currentDate + "_" + "tasks" + ".txt";
    
-   elapsedTime:string = this.todaysDirectoryName + "/" + "tasks_elapsedTime_" + this.currentDate + ".txt";
+   elapsedTime:string = this.todaysDirectoryName + "/" + this.currentDate + "_" + "tasks_elapsedTime" + ".txt";
    
-   lastFormatedTime:string = this.todaysDirectoryName + "/" + "tasks_lastFormatedTime_" + this.currentDate + ".txt";
+   lastFormatedTime:string = this.todaysDirectoryName + "/" + this.currentDate + "_" + "tasks_lastFormatedTime" + ".txt";
    
-   InWorkBreaks:string = this.todaysDirectoryName + "/" + "tasks_inWorkBreaks_" + this.currentDate + ".txt";
+   InWorkBreaks:string = this.todaysDirectoryName + "/" + this.currentDate + "_" + "tasks_inWorkBreaks" + ".txt";
 }

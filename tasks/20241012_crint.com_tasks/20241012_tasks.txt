@@ -1,0 +1,10 @@
+crintt.com_tasks_20241012
+-----------------------------
+[Task]
+05.18.[0.02] Report executed tasks
+   05.20.[0.05] Process corrected .xlsx file
+   05.21.[0.07] Correct detected errors
+   05.21.[0.07] Generate report and invoice
+   05.22.[0.0833] Document tasks in the ettkracker app
+   05.23.[0.1] Evaluate invoice content through Gemini AI
+   05.24.[0.1167] Evaluate invoice content through Edge Copilot AI

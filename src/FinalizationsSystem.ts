@@ -1,7 +1,11 @@
+import FileNameSystem from "./FileNameSystem.js";
 import TabSystem from "./TabSystem.js";
 import TimeTracker from "./TimeTracker.js";
+import { exec } from 'child_process';
 
 export default class FinalizationsSystem {
+   
+   fnmSys = new FileNameSystem();
 
    success(
       newLine: string, 
@@ -23,6 +27,8 @@ export default class FinalizationsSystem {
          console.log(`${tabSystem.tab1}Line appended successfully:\n${newLine}`);
          timeSystem.reset();
       }
+
+      // exec(`notepad "${this.fnmSys.fileName1}"`);
    }
 
    error(err: Error, tabSystem: TabSystem, timeSystem: TimeTracker) {

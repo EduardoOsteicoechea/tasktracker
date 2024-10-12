@@ -1,0 +1,4 @@
+avantleap_tasks_20241012
+-----------------------------
+[Task]
+05.29.[0.033] enhance eottracker and prepare for video generation

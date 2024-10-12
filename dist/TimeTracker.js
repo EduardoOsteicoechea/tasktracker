@@ -118,7 +118,7 @@ export default class TimeTracker {
         // console.log("timeDifference: " + timeDifference);
         // console.log("currentHour + currentMinutes: " + (currentHour + currentMinutes));
         // console.log("lastHour + lastMinutes: " + (lastHour + lastMinutes));
-        return parseFloat(timeDifference.toFixed(2));
+        return parseFloat(timeDifference.toFixed(3));
     }
     reset() {
         // this.generateTasksTimeReport();

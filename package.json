@@ -8,25 +8,26 @@
       "addTaskSuccess": "node ./dist/addTaskSuccess.js",
       "addTaskFailure": "node ./dist/addTaskFailure.js",
       "addTaskOngoing": "node ./dist/addTaskOngoing.js",
-      "addStop": "node ./dist/addStop.js",
-      "addInWorkBreak": "node ./dist/addInWorkBreak.js",
+      "addTaskItem": "node ./dist/addTaskItem.js",
       "addSubtask1": "node ./dist/addSubtask1.js",
       "addSubtask1Item": "node ./dist/addSubtask1Item.js",
       "addSubtask1Success": "node ./dist/addSubtask1Success.js",
       "addSubtask1Failure": "node ./dist/addSubtask1Failure.js",
       "addSubtask1Ongoing": "node ./dist/addSubtask1Ongoing.js",
       "addSubtask1Postponed": "node ./dist/addSubtask1Postponed.js",
+      "addSubtask1ItemItem": "node ./dist/addSubtask1ItemItem.js",
       "addSubtask2": "node ./dist/addSubtask2.js",
       "addSubtask2Item": "node ./dist/addSubtask2Item.js",
       "addSubtask2Success": "node ./dist/addSubtask2Success.js",
       "addSubtask3": "node ./dist/addSubtask3.js",
-      "addSubtask4": "node ./dist/addSubtask4.js"
+      "addSubtask4": "node ./dist/addSubtask4.js",
+      "addStop": "node ./dist/addStop.js",
+      "addInWorkBreak": "node ./dist/addInWorkBreak.js"
    },
    "dependencies": {
       "fs": "^0.0.1-security",
       "moment": "^2.30.1",
-      "open": "^10.1.0",
-      "yargs": "^17.7.2"
+      "open": "^10.1.0"
    },
    "devDependencies": {
       "@types/node": "^22.7.5",
